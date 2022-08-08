@@ -21,15 +21,12 @@ def Insert_row_(row_number, df, row_value):
    
 #Criando a linha que queremos inserir
 def inserir(valor):
-    valor2 = []
-    for x in valor:
-        valor2.append(x)
     df = pd.read_excel('/home/dalessandro/Desktop/API/dados/dados_teste.xlsx')
-    row_number = 0
-    row_value = valor2
-    #df = df.drop(1)
-    print(valor2)
-    #print(df)
+    row_number = 1
+    row_value = valor
+    df = Insert_row_(row_number, df, row_value)
+    #print(valor2)
+    df = df.drop(1)
     try:
         df.to_excel(r'/home/dalessandro/Desktop/API/dados/teste2_novo.xlsx', index = False)
         return True

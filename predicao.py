@@ -28,8 +28,6 @@ from sklearn.feature_selection import f_regression
 from sklearn.preprocessing import StandardScaler
 
 #Leitura do datasete
-dados = pd.read_excel('/home/dalessandro/Desktop/API/dados/dados1.xlsx')
-teste2 = pd.read_excel('/home/dalessandro/Desktop/API/dados/dados_teste.xlsx')
 #print(dados.keys())
 
 
@@ -64,6 +62,8 @@ def conversao_bin(tdado):
     return tdado
 
 def execusoes():
+    dados = pd.read_excel('/home/dalessandro/Desktop/API/dados/dados1.xlsx')
+    teste2 = pd.read_excel('/home/dalessandro/Desktop/API/dados/teste2_novo.xlsx')
     teste = drop(teste2)
     dados2 = drop(dados)
 
