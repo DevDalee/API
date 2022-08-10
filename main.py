@@ -1,5 +1,5 @@
 from flask import Flask,request
-from teste import inserir
+from inserir_nova_linha import inserir
 from predicao import execusoes
 
 app = Flask("teste")
@@ -11,9 +11,8 @@ def predicao():
     listOfValues = body.values()
     listOfValues = list(listOfValues)
     inserir(listOfValues)
-    print(len(listOfValues))
     re = execusoes()
-    print(re)
+    print("AOL: ",re)
     return 'OK'
 
 app.run()
